@@ -1,14 +1,15 @@
 package sam.example.smartacademy.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
+
 @AllArgsConstructor
 @NoArgsConstructor
-
-public class ResponseMessage {
+@Getter
+@Setter
+@ToString
+@Builder
+public class ResponseMessage  {
 
     private String message;
     private Object data;

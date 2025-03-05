@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/smartacademy
+    url: jdbc:postgresql://localhost:5432/smart_academy
     username: postgres
-    password: root123
+    password: 123
     driverClassName: org.postgresql.Driver
   jpa:
     hibernate:

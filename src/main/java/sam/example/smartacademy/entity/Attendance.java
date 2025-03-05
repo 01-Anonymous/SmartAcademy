@@ -1,20 +1,19 @@
 package sam.example.smartacademy.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import sam.example.smartacademy.entity.tempAbs.AbsLongEntity;
 
 import java.time.LocalDate;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-public class Attendance {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+@Getter
+@Setter
+@ToString
+@Builder
+public class Attendance extends AbsLongEntity {
 
     @ManyToOne
     private Student student;

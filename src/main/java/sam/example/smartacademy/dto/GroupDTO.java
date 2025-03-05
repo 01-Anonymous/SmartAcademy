@@ -1,6 +1,7 @@
 package sam.example.smartacademy.dto;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import sam.example.smartacademy.entity.enums.Days;
@@ -11,8 +12,10 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class GroupDTO {
 
+    private Long id ;
     private String groupName;
     private String courseName;
     private Long teacherId;

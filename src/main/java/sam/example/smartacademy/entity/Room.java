@@ -1,23 +1,24 @@
 package sam.example.smartacademy.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
+import sam.example.smartacademy.entity.tempAbs.AbsLongEntity;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
+@ToString
 @Entity
-public class Room {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+@Builder
+public class Room extends AbsLongEntity {
+
+    @Column(unique = true)
     private String roomName;
+
     private Integer capacity;
+
     private Integer countOfTable;
+
     private Integer countOfChair;
 }

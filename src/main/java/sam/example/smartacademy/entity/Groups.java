@@ -1,25 +1,27 @@
 package sam.example.smartacademy.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import sam.example.smartacademy.entity.enums.Days;
 import sam.example.smartacademy.entity.enums.Status;
+import sam.example.smartacademy.entity.tempAbs.AbsLongEntity;
 
 import java.time.LocalDate;
 import java.util.List;
 
-@Data
+
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
+@ToString
 @Entity
-public class Groups {
+@Builder
+public class Groups extends AbsLongEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+
     private String groupName;
+
     private String courseName;
 
     @ManyToOne
@@ -27,9 +29,12 @@ public class Groups {
 
     @ManyToOne
     private Room room;
+
     @ManyToMany
     private List<Student> students;
+
     private Integer stNumber = 0;
+
     @ElementCollection
     @Enumerated(EnumType.STRING)
     private List<Days> days;
@@ -38,6 +43,8 @@ public class Groups {
     private LocalDate endtDate;
     private Integer groupPrice = 0;
     private Status status = Status.ACTIVE;
-    
+
 
 }
+
+
