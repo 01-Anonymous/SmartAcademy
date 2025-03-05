@@ -1,19 +1,19 @@
 package sam.example.smartacademy.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import sam.example.smartacademy.entity.enums.Days;
 import sam.example.smartacademy.entity.enums.Status;
 
 import java.time.LocalDate;
 import java.util.List;
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
+@Getter
+@Setter
+@ToString
+@Entity(name = "groups")
 public class Groups {
 
     @Id

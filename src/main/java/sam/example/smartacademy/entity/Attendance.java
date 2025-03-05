@@ -1,16 +1,16 @@
 package sam.example.smartacademy.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 
-@Entity
+@Entity(name = "attendance")
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
+@ToString
 public class Attendance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
