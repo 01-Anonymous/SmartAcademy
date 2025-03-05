@@ -1,18 +1,17 @@
 package sam.example.smartacademy.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import sam.example.smartacademy.entity.enums.Gender;
 import sam.example.smartacademy.entity.enums.Role;
 import sam.example.smartacademy.entity.enums.Status;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-@Entity
-@Table(name = "users")
+@Getter
+@Setter
+@ToString
+@Entity(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

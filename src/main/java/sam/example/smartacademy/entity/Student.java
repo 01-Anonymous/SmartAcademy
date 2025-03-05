@@ -1,16 +1,16 @@
 package sam.example.smartacademy.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import sam.example.smartacademy.entity.enums.Gender;
 import sam.example.smartacademy.entity.enums.Status;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-@Entity
+@Getter
+@Setter
+@ToString
+@Entity(name = "students")
 
 public class Student {
     @Id
